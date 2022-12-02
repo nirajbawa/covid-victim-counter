@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>COVID VICTIM COUNTER</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+ 
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   
+   
+   <meta name="theme-color" content="#ccffff">
+
+</head>
+
+<body>
+
+<!-- navbar -->
+<nav>
+  <div>
+    <select id="statelist" onchange="getstate()">
+      
+</select>
+
+  </div>
+</nav>
+
+
+<div class="maindiv">
+  
+  <div class="card" data-aos="fade-up">
+  <h4>state</h4>
+  <div id="country">
+    1
+  </div>
+   <h3><img src="./images/waving-flag-.png" alt="country" /></h3>
+</div>
+  
+
+<div class="card" data-aos="fade-up">
+  <h4>victims</h4>
+  <div id="victims">
+    1
+  </div>
+  <h3><img src="./images/target.png" alt="" /></h3>
+</div>
+
+<div class="card" data-aos="fade-up">
+  <h4>deaths</h4>
+  <div id="dead">
+    1
+  </div>
+   <h3>
+     <img src="./images/grave.png" alt="" />
+     </h3>
+</div>
+
+
+
+<div class="card" data-aos="fade-up">
+  <h4>recovered</h4>
+  <div id="recovered">
+    1
+  </div>
+   <h3>
+     <img src="./images/recovered.png" alt="" />
+     </h3>
+</div>
+
+
+</div>
+
+<script src="main.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200, // offset (in px) from the original trigger point
+      delay: 30, // values from 0 to 3000, with step 50ms
+      duration: 2000, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the anim
+      });
+  </script>
+  
+
+</body>
+</html>

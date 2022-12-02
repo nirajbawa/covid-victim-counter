@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+nav{
+  width: 100vw;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: fixed;
+  background-color: white;
+  box-shadow: 2px 5px 20px 5px #e6e6e6;
+  z-index: 20;
+}
+
+nav div select::before{
+  padding-left: 0px;
+}
+nav div select::after
+{
+  padding-left: 130px;
+}
+
+nav div select{
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 25px;
+  word-spacing: 6px;
+  letter-spacing: 4px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: all 0.20s;
+} 
+
+nav div select:active{
+  background-color: white;
+}
+
+.maindiv{
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding-top: 80%;
+  padding-bottom: 80%; */
+  padding-top: 5rem;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+.card{
+  width: 270px;
+  height: 300px;
+  text-align: center;
+  background-color:   #e6ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  
+  position: relative;
+  
+  transform: scale(0);
+
+  Text-transform: uppercase;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 25px;
+  word-spacing: 6px;
+  letter-spacing: 4px;
+  border-radius: 10px;
+  box-shadow: 5px 4px 20px 2px #e6e6e6;
+  margin-top: 10%;
+  flex-flow: none;
+}
+
+.card h4{
+  background-color: white;
+  width: 100%;
+  padding: 5%;
+  border-bottom-right-radius : 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card div {
+  font-size: 35px;
+}
+
+.card h3{
+  background-color: white;
+  width: 100%;
+  padding: 3%;
+  border-bottom-right-radius : 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.card h3 img{
+  width: 40px;
+  height: 40px;
+}
+
+@media only screen and (max-width: 920px){
+  
+  .maindiv{
+    padding-top: 55%;
+    padding-bottom: 40%;
+  }
+  
+  .card{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+}
