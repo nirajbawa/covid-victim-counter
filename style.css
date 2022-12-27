@@ -73,25 +73,22 @@ nav div select:active{
   order: 3;
   flex-flow: row wrap;
   align-items: stretch;
-  padding: 12rem 0rem;
+  padding: 12rem 5rem;
   align-content: center;
 }
 
 .card{
-  width: 270px;
-  height: 325px;
+  width: 300px;
+  height: 375px;
   text-align: center;
-  background-color:   #e6ffff;
+  background-color: #e6ffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  
   position: relative;
-  
   transform: scale(0);
-
   Text-transform: uppercase;
   font-family: 'Londrina Solid', cursive;
   font-size: 25px;
@@ -99,7 +96,7 @@ nav div select:active{
   letter-spacing: 4px;
   border-radius: 10px;
   box-shadow: 5px 4px 20px 2px #e6e6e6;
-  flex-flow: none;
+
 }
 
 .card h4{
