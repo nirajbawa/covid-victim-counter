@@ -11,6 +11,8 @@ let dead = document.getElementById("dead");
 
 let recovered = document.getElementById("recovered");
 
+let active =  document.getElementById("active");
+
 let a;
 
 
@@ -26,18 +28,19 @@ function getData(url){
       
       console.log(data)
       
+      console.log(data[0].new_active)
       
       
-      
-      for (var i = 1; i<data.statewise.length; i++) {
+      for (var i = 1; i<data.length; i++) {
         
         var node = document.createElement('option');
            
            
         node.setAttribute("value", i);
         
+       
         
-        var textnode = document.createTextNode(data.statewise[i].statecode);
+        var textnode = document.createTextNode(data[i].state_name);
       
        node.appendChild(textnode);
       
@@ -45,16 +48,16 @@ function getData(url){
       
       }
         
-      country.innerText = data.statewise.length;
+      country.innerText = data[0].length;
+
+      victims.innerText = data[0].new_active;
+        
+      dead.innerText = data[0];
       
-      victims.innerText = data.statewise[0].confirmed;
-      
-      dead.innerText = data.statewise[0].deaths;
-      
-      recovered.innerText = data.statewise[0].recovered;
+      recovered.innerText = data[0].recovered;
         
         
-      a = data.statewise;
+      a = data;
       
     })
 }
@@ -64,14 +67,16 @@ function getstate(){
     statevalue = document.getElementById("statelist").value ;
       
       
-      country.innerText = a[statevalue].state;
+      country.innerText = a[statevalue].state_name;
       
-      victims.innerHTML = a[statevalue].confirmed;
+      victims.innerHTML = a[statevalue].new_positive;
+
+      active.innerHTML = a[statevalue].new_active;
       
-      dead.innerText = a[statevalue].deaths;
+      dead.innerText = a[statevalue].new_death;
       
       
-    recovered.innerText = a[statevalue].recovered;
+    recovered.innerText = a[statevalue].new_cured;
       
       
       
@@ -79,7 +84,7 @@ function getstate(){
       
       
 }
-const proxy = "https://cors-anywhere.herokuapp.com/https://api.covid19india.org/data.json";
+const proxy = "https://www.mohfw.gov.in/data/datanew.json";
 
 getData(proxy)
 
