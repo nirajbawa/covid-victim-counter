@@ -27,7 +27,7 @@ function getData(url) {
     return response.json();
   }).then((data) => {
 
-console.log(data);
+// console.log(data);
     
     
 
