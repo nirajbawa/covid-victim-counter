@@ -34,10 +34,7 @@ function getData(url) {
     for (var i = 0; i < data.length; i++) {
 
       
-      v += parseInt(data[i].new_positive);
-      av += parseInt(data[i].new_active);
-      d += parseInt(data[i].new_death);
-      r += parseInt(data[i].new_cured);
+
     
 
       var node = document.createElement('option');
@@ -59,11 +56,16 @@ function getData(url) {
     }
 
 
+    v += parseInt(data[36].new_positive);
+    av += parseInt(data[36].new_active);
+    d += parseInt(data[36].new_death);
+    r += parseInt(data[36].new_cured);
+    c = data.length;
     
 
     a = data;
 
-    c = data.length;
+   
 
     setdefault(c,v,av,d,r);
 
