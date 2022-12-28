@@ -70,6 +70,10 @@ console.log(data);
 
   })
   .catch((e)=>{
+      getData(proxy)
+      setTimeout(()=>{
+        console.log(proxy);
+      }, 10000);
       
   })
 }
