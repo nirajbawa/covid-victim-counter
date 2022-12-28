@@ -69,11 +69,11 @@ nav div select:active{
   padding-top: 5rem;
   flex-wrap: wrap;
   position: absolute;
-  gap: 7rem 4rem;
+  gap: 15rem 4rem;
   order: 3;
   flex-flow: row wrap;
   align-items: stretch;
-  padding: 12rem 5rem;
+  padding: 15rem 5rem;
   align-content: center;
 }
 
@@ -135,13 +135,14 @@ nav div select:active{
 @media only screen and (max-width: 920px){
   
   .maindiv{
-    padding-top: 55%;
-    padding-bottom: 40%;
+    padding: 12rem 2rem;
   }
   
   .card{
     margin-top: 5%;
     margin-bottom: 5%;
   }
+
+
 
 }

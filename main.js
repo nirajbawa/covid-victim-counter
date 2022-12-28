@@ -15,6 +15,7 @@ let active = document.getElementById("active");
 
 let a;
 
+let av = 0 , v=0, d=0, r=0, c;
 
 
 
@@ -28,7 +29,7 @@ function getData(url) {
 
 console.log(data);
     
-    let av = 0 , v=0, d=0, r=0;
+    
 
     for (var i = 0; i < data.length; i++) {
 
@@ -58,30 +59,44 @@ console.log(data);
     }
 
 
-    country.innerText = data.length;
-
-    victims.innerText = v;
-
-    active.innerText = av;
-  
-    dead.innerText = d;
-  
-    recovered.innerText = r;
- 
-  
+    
 
     a = data;
 
+    c = data.length;
 
+    setdefault(c,v,av,d,r);
+
+
+  })
+  .catch((e)=>{
+      
   })
 }
 
 
+function setdefault(c,v,av,d,r)
+{
+  country.innerText = c;
+
+  victims.innerText = v;
+
+  active.innerText = av;
+
+  dead.innerText = d;
+
+  recovered.innerText = r;
+
+}
+
 
 function getstate() {
+  
 
   statevalue = document.getElementById("statelist").value;
 
+  if(statevalue>=0)
+  {
 
   country.innerText = a[statevalue].state_name;
 
@@ -94,9 +109,11 @@ function getstate() {
 
   recovered.innerText = a[statevalue].new_cured;
 
+  }
 
-
-  console.log(a[statevalue]);
+  else{
+    setdefault(c,v,av,d,r);
+  }
 
 
 }
